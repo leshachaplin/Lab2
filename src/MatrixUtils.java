@@ -51,4 +51,14 @@ public class MatrixUtils {
 
         return newMatrix;
     }
+
+    public static int[][] transpone(int[][] matrix) {
+        int[][] result = copyMatrix(matrix);
+        for (int i = 0, size = matrix.length; i < size; i++) {
+            for (int j = 0, innerSize = matrix[i].length; j < innerSize; j++) {
+                result[i][j] = matrix[j][i];
+            }
+        }
+        return result;
+    }
 }
